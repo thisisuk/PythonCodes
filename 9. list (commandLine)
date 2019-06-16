@@ -1,0 +1,25 @@
+if __name__ == '__main__':
+    N = int(input())
+    cmdLineArgument = []
+    command = []
+    FinalList = []
+    
+    for x in range(N):
+        cmdLineArgument.append(input())
+    
+    for args in cmdLineArgument:
+        command = args.split()
+        if(command[0] == "insert"):
+            FinalList.insert(int(command[1]),int(command[2]))
+        if(command[0]== "print"):
+            print(FinalList)
+        if(command[0]== "remove"):
+            FinalList.remove(int(command[1]))
+        if(command[0]== "append"):
+            FinalList.append(int(command[1]))
+        if(command[0]== "sort"):
+            FinalList.sort()
+        if(command[0]== "pop"):
+            FinalList.pop()
+        if(command[0]== "reverse"):
+            FinalList.reverse()
