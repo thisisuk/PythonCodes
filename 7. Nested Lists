@@ -6,13 +6,10 @@ if __name__ == '__main__':
         lst.append([name, score])
     lst = sorted(lst, key = lambda x: x[1])
 
-    score =  [i[1] for i in lst]
-    score = sorted(set(score))
+    score =  sorted(set([i[1] for i in lst]))
     secLowScore = score[1]
-
     
-    secLowName = [i[0] for i in lst if i[1] == secLowScore]
-    secLowName= sorted(secLowName)
+    secLowName = sorted([i[0] for i in lst if i[1] == secLowScore])
     
-    for i in secLowName:
-        print(i)
+    for name in secLowName:
+        print(name)
