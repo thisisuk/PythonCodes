@@ -1,0 +1,18 @@
+if __name__ == '__main__':
+    lst = []
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        lst.append([name, score])
+    lst = sorted(lst, key = lambda x: x[1])
+
+    score =  [i[1] for i in lst]
+    score = sorted(set(score))
+    secLowScore = score[1]
+
+    
+    secLowName = [i[0] for i in lst if i[1] == secLowScore]
+    secLowName= sorted(secLowName)
+    
+    for i in secLowName:
+        print(i)
